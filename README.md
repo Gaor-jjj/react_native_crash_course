@@ -31,7 +31,7 @@ A React Native application built with Expo, NativeWind, and Appwrite that allows
 1. Clone the repository:
 
    ```bash
-   git clone (https://github.com/Gaor-jjj/react_native_crash_course
+   git clone https://github.com/Gaor-jjj/react_native_crash_course
    cd react_native_crash_course
    ```
 

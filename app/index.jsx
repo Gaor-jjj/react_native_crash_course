@@ -4,9 +4,9 @@ import { Redirect, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import 'react-native-url-polyfill/auto'
 
-import { images } from '../constants';
-import CustomButton from '../components/CustomButton';
-import { useGlobalContext } from '../context/GlobalProvider';
+import { images } from 'constants';
+import CustomButton from 'components/CustomButton';
+import { useGlobalContext } from 'context/GlobalProvider';
 
 export default function App() {
     const { isLoading, isLoggedIn } = useGlobalContext();

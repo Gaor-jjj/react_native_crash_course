@@ -1,15 +1,15 @@
 import { View, Text, ScrollView, Image } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import FormField from '../../components/FormField'
+import FormField from 'components/FormField'
 import { TouchableOpacity, Alert } from 'react-native'
 import { Video, ResizeMode } from 'expo-av'
-import { icons } from '../../constants'
-import CustomButton from '../../components/CustomButton'
+import { icons } from 'constants'
+import CustomButton from 'components/CustomButton'
 import * as ImagePicker from 'expo-image-picker'
 import { router } from 'expo-router'
-import { createVideo } from '../../lib/appwrite' 
-import { useGlobalContext } from '../../context/GlobalProvider'
+import { createVideo } from 'lib/appwrite' 
+import { useGlobalContext } from 'context/GlobalProvider'
 
 const Create = () => {
   const { user } = useGlobalContext();

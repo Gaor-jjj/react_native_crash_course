@@ -1,30 +1,29 @@
 import { View, Text, FlatList, Image, RefreshControl } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import SearchInput from '../../components/SearchInput'
+import SearchInput from 'components/SearchInput'
 
-import { images } from '../../constants'
-import Trending from '../../components/Trending'
-import EmptyState from '../../components/EmptyState'
-import { getAllPosts, getLatestPosts } from '../../lib/appwrite'
-import useAppwrite from '../../lib/useAppwrite'
-import VideoCard from '../../components/VideoCard'
-import { useGlobalContext } from '../../context/GlobalProvider'
-
+import { images } from 'constants'
+import Trending from 'components/Trending'
+import EmptyState from 'components/EmptyState'
+import { getAllPosts, getLatestPosts } from 'lib/appwrite'
+import useAppwrite from 'lib/useAppwrite'
+import VideoCard from 'components/VideoCard'
+import { useGlobalContext } from 'context/GlobalProvider'
 
 const Home = () => {
   const { user, setUser, setIsLoggedIn } = useGlobalContext();
-  const { data: posts, refetch } = useAppwrite(getAllPosts)
-  const { data: latestPosts } = useAppwrite(getLatestPosts)
+  const { data: posts, refetch: refetchPosts } = useAppwrite(getAllPosts);
+  const { data: latestPosts, refetch: refetchLatestPosts } = useAppwrite(getLatestPosts);
 
-
-  const [refreshing, setRefreshing] = useState(false)
+  const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = async () => {
-    setRefreshing(true)
-    await refetch();
-    setRefreshing(false)
-  }
+    setRefreshing(true);
+    await refetchPosts();
+    await refetchLatestPosts();
+    setRefreshing(false);
+  };
 
   return (
     <SafeAreaView className="bg-primary h-full">
