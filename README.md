@@ -31,8 +31,8 @@ A React Native application built with Expo, NativeWind, and Appwrite that allows
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/ai-video-sharing-app.git
-   cd ai-video-sharing-app
+   git clone (https://github.com/Gaor-jjj/react_native_crash_course
+   cd react_native_crash_course
    ```
 
 2. Install dependencies:
