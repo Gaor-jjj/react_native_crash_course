@@ -41,9 +41,9 @@ A React Native application built with Expo, NativeWind, and Appwrite that allows
    npm install
    ```
 
-3. Set up Appwrite:
+3. Set up Appwrite (optional):
 
-   - Follow the [Appwrite setup guide](https://appwrite.io/docs/tutorials/react-native/step-3) to configure authentication, storage, and database.
+   - If you want to set up your own Appwrite backend follow the [Appwrite setup guide](https://appwrite.io/docs/tutorials/react-native/step-3) to configure authentication, storage, and database.
 
 4. Run the app:
 
